@@ -63,10 +63,12 @@ SELECT * FROM vw_ProductSalesReport;
 Run the above SQL script in SQL Server Management Studio (SSMS) to generate the sales report using the ROLLUP operator. You can copy the output and visualize it in Excel using clustered column charts or stacked bar charts to show product-wise and category-wise sales trends.
 
 Screenshot
-<img width="1388" height="1091" alt="Screenshot 2025-07-22 212426" src="https://github.com/user-attachments/assets/42833d5a-94c0-432a-b84b-9129f3ec705a" />
+<img width="1388" height="1091" alt="Output" src="https://github.com/user-attachments/assets/73f63e31-77e1-4054-8fbf-1ddd7bf46a2b" />
+
 
 Visualisation using Excel charts:
-<img width="929" height="308" alt="image" src="https://github.com/user-attachments/assets/fb891af9-ed15-40fc-a1e2-5d0a8a76e2f1" />
+<img width="1858" height="616" alt="Sales_visualisation" src="https://github.com/user-attachments/assets/96ed8e38-cc78-4d5b-8bf7-40490e314221" />
+
 
 
 Contact
