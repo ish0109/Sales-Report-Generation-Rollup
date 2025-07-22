@@ -1,11 +1,10 @@
---CREATE DATABASE SalesReportGeneration;
+CREATE DATABASE SalesReportGeneration;
 USE SalesReportGeneration;
--- Create the Sales table
---CREATE TABLE ProductSales (
---    ProductCategory VARCHAR(50),
---    ProductName VARCHAR(100),
---    SaleAmount DECIMAL(10,2)
---);
+Create the Sales table
+CREATE TABLE ProductSales (
+ProductCategory VARCHAR(50),
+ProductName VARCHAR(100),
+SaleAmount DECIMAL(10,2));
 -- Insert sample data
 INSERT INTO ProductSales (ProductCategory, ProductName, SaleAmount) VALUES
 ('Beverages', 'Tea', 100.00),
@@ -24,13 +23,13 @@ SELECT
 FROM ProductSales
 GROUP BY ROLLUP (ProductCategory, ProductName);
 GO
---CREATE VIEW vw_ProductSalesReport AS
---SELECT 
---    ISNULL(ProductCategory, 'TOTAL') AS ProductCategory,
---    ISNULL(ProductName, 'Subtotal') AS ProductName,
---    SUM(SaleAmount) AS TotalSales
---FROM ProductSales
---GROUP BY ROLLUP (ProductCategory, ProductName);
---GO
---SELECT * FROM vw_ProductSalesReport;
+CREATE VIEW vw_ProductSalesReport AS
+SELECT 
+    ISNULL(ProductCategory, 'TOTAL') AS ProductCategory,
+    ISNULL(ProductName, 'Subtotal') AS ProductName,
+    SUM(SaleAmount) AS TotalSales
+FROM ProductSales
+GROUP BY ROLLUP (ProductCategory, ProductName);
+GO
+SELECT * FROM vw_ProductSalesReport;
 
